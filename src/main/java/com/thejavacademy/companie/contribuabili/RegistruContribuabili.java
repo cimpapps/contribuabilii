@@ -29,7 +29,7 @@ public class RegistruContribuabili {
             maresteRegistru();
         }
         angajati[numarTotal - 1] = contribuabil;
-        System.out.println("A fost contribuabil " + contribuabil);
+        System.out.println("A fost adaugat contribuabil " + contribuabil);
     }
 
     public static void stergeContribuabil(Contribuabil contribuabil) {

@@ -18,9 +18,10 @@ public class Contribuabil implements Incasator{
 
     private ICalculatorTaxe calculatorTaxe;
 
-    public Contribuabil(ICalculatorTaxe calculatorTaxe) {
+    public Contribuabil(String nume, ICalculatorTaxe calculatorTaxe) {
         this.id = counter;
         counter++;
+        this.nume = nume;
         this.calculatorTaxe = calculatorTaxe;
     }
 
@@ -33,13 +34,18 @@ public class Contribuabil implements Incasator{
         this.venituri += suma;
         double taxaPeVenit = calculatorTaxe.calculeazaTaxa(suma);
         this.taxeDePlatit += taxaPeVenit;
-        System.out.println(this);
+        System.out.println("Situatie contribuabil dupa ce a DECLARAT VENITUL " + suma +": " + this);
     }
 
     public void platesteTaxa(double suma) {
+        if (suma > this.taxeDePlatit) {
+            System.out.println("Ati incercat sa platiti suma de " + suma +
+                    " - este mai mare decat taxa pe care o aveti de platit: " + this.taxeDePlatit);
+            return;
+        }
         this.taxeDePlatit -= suma;
         this.taxePlatite += suma;
-        System.out.println(this);
+        System.out.println("Situatie contribuabil dupa ce a PLATIT TAXA " + suma +": " + this);
     }
 
     public String getNume() {
