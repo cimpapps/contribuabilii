@@ -1,6 +1,6 @@
 package com.thejavacademy.companie;
 
-import com.thejavacademy.companie.calculator.view.PanouAdmin;
+import com.thejavacademy.companie.view.PanouAdmin;
 import com.thejavacademy.companie.contribuabili.Contribuabil;
 import com.thejavacademy.companie.contribuabili.RegistruContribuabili;
 

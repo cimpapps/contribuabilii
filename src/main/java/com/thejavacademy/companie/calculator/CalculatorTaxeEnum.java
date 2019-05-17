@@ -16,4 +16,20 @@ public enum CalculatorTaxeEnum implements ICalculatorTaxe {
         return suma * procentTaxa;
     }
 
+
+    public static CalculatorTaxeEnum getCalculator(Departament departament) {
+        switch (departament) {
+            case IT:
+                return CALCULATOR_IT;
+            case CONSTRUCTII:
+                return CALCULATOR_CONSTRUCTII;
+            default:
+                return CALCULATOR_GENERAL;
+        }
+    }
+
+    public static enum Departament {
+        GENERAL, IT, CONSTRUCTII,
+    }
+
 }

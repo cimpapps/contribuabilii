@@ -1,4 +1,4 @@
-package com.thejavacademy.companie.calculator.view;
+package com.thejavacademy.companie.view;
 
 import com.thejavacademy.companie.calculator.CalculatorTaxeEnum;
 import com.thejavacademy.companie.contribuabili.Contribuabil;
@@ -7,7 +7,6 @@ import com.thejavacademy.companie.contribuabili.RegistruContribuabili;
 import javax.swing.*;
 
 import static com.thejavacademy.companie.calculator.CalculatorTaxeEnum.*;
-import static com.thejavacademy.companie.calculator.view.PanouAdmin.Departament.*;
 
 public class PanouAdmin extends JPanel {
 
@@ -46,24 +45,15 @@ public class PanouAdmin extends JPanel {
         name.setFocusable(true);
         contentPane.add(name);
         JButton ok = new JButton("OK");
-        contentPane.add(ok);
         JComboBox comboBox = new JComboBox();
-        comboBox.addItem(IT);
-        comboBox.addItem(CONSTRUCTII);
-        comboBox.addItem(GENERAL);
+        comboBox.addItem(Departament.IT);
+        comboBox.addItem(Departament.CONSTRUCTII);
+        comboBox.addItem(Departament.GENERAL);
         contentPane.add(comboBox);
+        contentPane.add(ok);
         ok.addActionListener(e -> {
-            CalculatorTaxeEnum  calculatorTaxeEnum = null;
-            Departament selectedItem = (Departament) comboBox.getSelectedItem();
-            switch (selectedItem) {
-                case IT:
-                    calculatorTaxeEnum = CALCULATOR_IT;
-                case CONSTRUCTII:
-                    calculatorTaxeEnum = CALCULATOR_CONSTRUCTII;
-                default:
-                    calculatorTaxeEnum = CALCULATOR_GENERAL;
-            }
-            Contribuabil contribuabil = new Contribuabil(name.getText(), calculatorTaxeEnum);
+            Departament departament = (Departament) comboBox.getSelectedItem();
+            Contribuabil contribuabil = new Contribuabil(name.getText(), CalculatorTaxeEnum.getCalculator(departament));
             RegistruContribuabili.adaugaContribuabil(contribuabil);
             jDialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
             jDialog.dispose();
@@ -88,9 +78,6 @@ public class PanouAdmin extends JPanel {
     }
 
 
-    static enum Departament {
-        IT, CONSTRUCTII, GENERAL,
-    }
 
 
 }
