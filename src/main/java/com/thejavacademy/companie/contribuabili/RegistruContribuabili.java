@@ -1,17 +1,16 @@
-package com.thejavacademy.companie.angajati;
+package com.thejavacademy.companie.contribuabili;
 
 public class RegistruContribuabili {
 
     private static int numarTotal = 0;
 
-    private static Contribuabil[] angajati = new Contribuabil[3];
-
+    private static Contribuabil[] angajati = new Contribuabil[10];
 
     public static Contribuabil[] getAngajati() {
         return angajati;
     }
 
-    public static int getIndexAngajatById(int id) {
+    public static int getIndexContribuabilById(int id) {
         //fara binary search
         //apoi refactorizam cu binary search
         //apoi eficientizam facand in Anagajat un numarDeOrdine
@@ -24,7 +23,7 @@ public class RegistruContribuabili {
         return -1;
     }
 
-    public static void adaugaAngajat(Contribuabil contribuabil) {
+    public static void adaugaContribuabil(Contribuabil contribuabil) {
         numarTotal++;
         if (numarTotal > angajati.length) {
             maresteRegistru();
@@ -33,9 +32,9 @@ public class RegistruContribuabili {
         System.out.println("A fost contribuabil " + contribuabil);
     }
 
-    public static void stergeAngajat(Contribuabil contribuabil) {
+    public static void stergeContribuabil(Contribuabil contribuabil) {
         //refactorizam sa stergem dintr-un singur pas dupa index
-        int indexDeSters = getIndexAngajatById(contribuabil.getId());
+        int indexDeSters = getIndexContribuabilById(contribuabil.getId());
         if (indexDeSters < 0) {
             System.out.println("Acest contribuabil " + contribuabil + " nu exista in registru");
             return;
@@ -56,6 +55,5 @@ public class RegistruContribuabili {
         }
 
         angajati = nouaLista;
-
     }
 }
