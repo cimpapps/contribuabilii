@@ -1,8 +1,10 @@
 package com.thejavacademy.companie;
 
+import com.thejavacademy.companie.calculator.view.PanouAdmin;
 import com.thejavacademy.companie.contribuabili.Contribuabil;
 import com.thejavacademy.companie.contribuabili.RegistruContribuabili;
 
+import javax.swing.*;
 import java.util.Arrays;
 
 import static com.thejavacademy.companie.calculator.CalculatorTaxeEnum.*;
@@ -33,11 +35,13 @@ public class Main {
 
         RegistruContribuabili.stergeContribuabil(a5);
         System.out.println(Arrays.toString(RegistruContribuabili.getAngajati()));
-        RegistruContribuabili.stergeContribuabil(a1);
-        RegistruContribuabili.stergeContribuabil(a2);
-        RegistruContribuabili.stergeContribuabil(a3);
-        RegistruContribuabili.stergeContribuabil(a4);
-
         System.out.println(Arrays.toString(RegistruContribuabili.getAngajati()));
+
+
+        JFrame fereastra = new JFrame();
+        fereastra.setContentPane(new PanouAdmin());
+        fereastra.pack();
+        fereastra.setVisible(true);
+        fereastra.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 }
