@@ -11,7 +11,26 @@ import static com.thejavacademy.companie.calculator.CalculatorTaxeEnum.*;
 import static com.thejavacademy.companie.calculator.CalculatorTaxeEnum.CALCULATOR_CONSTRUCTII;
 import static com.thejavacademy.companie.calculator.CalculatorTaxeEnum.CALCULATOR_IT;
 
+/**
+ * Se cere sa se dezvolte un program care sa tina evidenta veniturilor cetatenilor si a taxelor pe care le au de platit
+ * Orice cetatean care plateste taxe(contribuabil) trebuie sa fie aibe urmatorul comportament:
+ *  - isi declare veniturile noi
+ *  - isi plateasca taxele
+ *  - sa raspunda la intrebarea ce venituri a avut pana in prezent(suma a tot ce a declarat pana in prezent)
+ *  - sa raspunda la intrebarea ce taxe are de platit si ce taxe a platit pana acum
+ *  - sa raspunda la intrebarea ce id are
+ *
+ * Toti contribuabilii trebuie sa fie adaugati la un registru care expune urmatoarele functionalitati:
+ *  - adauga un contribuabil nou
+ *  - sterge un contribuabil
+ *  - gaseste un contribuabil din toata lista de contribuabili
+ *  - raporteaza evidenta tuturor contribuabililor
+ *
+ * Solutia initiala nu va fi optima dar pe masura ce cursul va inainte elevii isi asuma responsabilitatea sa
+ */
+
 public class Main {
+
 
     public static void main(String[] args) {
         Contribuabil a1 = new Contribuabil("Dan",CALCULATOR_CONSTRUCTII);

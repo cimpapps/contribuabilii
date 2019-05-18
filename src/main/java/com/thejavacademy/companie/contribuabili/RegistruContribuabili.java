@@ -4,7 +4,7 @@ public class RegistruContribuabili {
 
     private static int numarTotal = 0;
 
-    private static Contribuabil[] angajati = new Contribuabil[10];
+    private static Contribuabil[] angajati = new Contribuabil[2];
 
     public static Contribuabil[] getAngajati() {
         return angajati;

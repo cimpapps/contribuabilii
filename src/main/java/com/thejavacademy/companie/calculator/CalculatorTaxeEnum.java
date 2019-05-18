@@ -28,7 +28,7 @@ public enum CalculatorTaxeEnum implements ICalculatorTaxe {
         }
     }
 
-    public static enum Departament {
+    public  enum Departament {
         GENERAL, IT, CONSTRUCTII,
     }
 
