@@ -14,7 +14,7 @@ public class PanouAdmin extends JPanel {
     private JList list;
 
     public PanouAdmin() {
-        list = new JList(RegistruContribuabili.getAngajati());
+        list = new JList(RegistruContribuabili.getContribuabili());
         list.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
         list.setLayoutOrientation(JList.HORIZONTAL_WRAP);
         list.setVisibleRowCount(-1);
@@ -31,7 +31,7 @@ public class PanouAdmin extends JPanel {
     }
 
     private void repaintList() {
-        list.setListData(RegistruContribuabili.getAngajati());
+        list.setListData(RegistruContribuabili.getContribuabili());
         repaint();
     }
 

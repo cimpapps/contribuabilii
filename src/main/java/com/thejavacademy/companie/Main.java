@@ -25,7 +25,7 @@ import static com.thejavacademy.companie.calculator.CalculatorTaxe.CALCULATOR_IT
  *  - sterge un contribuabil
  *  - raporteaza evidenta tuturor contribuabililor
  *
- * Reigistru este unic pentru toti contribuabilii
+ * Reigistrul este unic pentru toti contribuabilii
  *
  * Solutia initiala nu va fi optima dar pe masura ce cursul va inainte elevii isi asuma responsabilitatea sa
  */
@@ -54,8 +54,8 @@ public class Main {
         Contribuabil a5 = new Contribuabil("John Doe", CALCULATOR_CONSTRUCTII);
 
         RegistruContribuabili.stergeContribuabil(a5);
-        System.out.println(Arrays.toString(RegistruContribuabili.getAngajati()));
-        System.out.println(Arrays.toString(RegistruContribuabili.getAngajati()));
+        System.out.println(Arrays.toString(RegistruContribuabili.getContribuabili()));
+        System.out.println(Arrays.toString(RegistruContribuabili.getContribuabili()));
 
 
         JFrame fereastra = new JFrame();

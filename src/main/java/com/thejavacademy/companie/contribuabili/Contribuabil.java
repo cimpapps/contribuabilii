@@ -17,6 +17,7 @@ public class Contribuabil implements IContribuabil {
     private double taxePlatite;
 
     private ICalculatorTaxe calculatorTaxe;
+    
 
     public Contribuabil(String nume, ICalculatorTaxe calculatorTaxe) {
         this.id = counter;

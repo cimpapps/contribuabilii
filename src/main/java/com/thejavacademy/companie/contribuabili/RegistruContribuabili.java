@@ -4,10 +4,10 @@ public class RegistruContribuabili {
 
     private static int numarTotal = 0;
 
-    private static Contribuabil[] angajati = new Contribuabil[3];
+    private static Contribuabil[] contribuabili = new Contribuabil[3];
 
-    public static Contribuabil[] getAngajati() {
-        return angajati;
+    public static Contribuabil[] getContribuabili() {
+        return contribuabili;
     }
 
     public static int getIndexContribuabilById(int id) {
@@ -15,7 +15,7 @@ public class RegistruContribuabili {
         //apoi refactorizam cu binary search
         //apoi eficientizam facand in Anagajat un numarDeOrdine
         for (int i = 0; i < numarTotal; i++) {
-            if (angajati[i].getId() == id) {
+            if (contribuabili[i].getId() == id) {
                 return i;
             }
         }
@@ -25,11 +25,11 @@ public class RegistruContribuabili {
 
     public static void adaugaContribuabil(Contribuabil contribuabil) {
         numarTotal++;
-        if (numarTotal > angajati.length) {
+        if (numarTotal > contribuabili.length) {
             maresteRegistru();
         }
-        angajati[numarTotal - 1] = contribuabil;
-        System.out.println("A fost adaugat contribuabil " + contribuabil);
+        contribuabili[numarTotal - 1] = contribuabil;
+        System.out.println("A fost adaugat contribuabilul " + contribuabil);
     }
 
     public static void stergeContribuabil(Contribuabil contribuabil) {
@@ -40,20 +40,20 @@ public class RegistruContribuabili {
             return;
         }
         for (int i = indexDeSters; i < numarTotal - 1; i++) {
-            angajati[i] = angajati[i + 1];
+            contribuabili[i] = contribuabili[i + 1];
         }
-        angajati[numarTotal - 1] = null;
+        contribuabili[numarTotal - 1] = null;
         numarTotal--;
     }
 
 
     private static void maresteRegistru() {
-        Contribuabil[] nouaLista = new Contribuabil[angajati.length * 2];
+        Contribuabil[] nouaLista = new Contribuabil[contribuabili.length * 2];
 
-        for (int i = 0; i < angajati.length; i++) {
-            nouaLista[i] = angajati[i];
+        for (int i = 0; i < contribuabili.length; i++) {
+            nouaLista[i] = contribuabili[i];
         }
 
-        angajati = nouaLista;
+        contribuabili = nouaLista;
     }
 }
