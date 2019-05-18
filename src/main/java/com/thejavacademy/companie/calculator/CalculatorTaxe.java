@@ -1,6 +1,6 @@
 package com.thejavacademy.companie.calculator;
 
-public enum CalculatorTaxeEnum implements ICalculatorTaxe {
+public enum CalculatorTaxe implements ICalculatorTaxe {
 
     CALCULATOR_GENERAL(0.16),
     CALCULATOR_IT(0.10),
@@ -8,16 +8,11 @@ public enum CalculatorTaxeEnum implements ICalculatorTaxe {
 
     double procentTaxa;
 
-    CalculatorTaxeEnum(double procentTaxa) {
+    CalculatorTaxe(double procentTaxa) {
         this.procentTaxa = procentTaxa;
     }
 
-    public double calculeazaTaxa(double suma) {
-        return suma * procentTaxa;
-    }
-
-
-    public static CalculatorTaxeEnum getCalculator(Departament departament) {
+    public static CalculatorTaxe getCalculator(Departament departament) {
         switch (departament) {
             case IT:
                 return CALCULATOR_IT;
@@ -28,7 +23,11 @@ public enum CalculatorTaxeEnum implements ICalculatorTaxe {
         }
     }
 
-    public  enum Departament {
+    public double calculeazaTaxa(double suma) {
+        return suma * procentTaxa;
+    }
+
+    public enum Departament {
         GENERAL, IT, CONSTRUCTII,
     }
 

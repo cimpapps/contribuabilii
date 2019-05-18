@@ -2,7 +2,7 @@ package com.thejavacademy.companie.contribuabili;
 
 import com.thejavacademy.companie.calculator.ICalculatorTaxe;
 
-public class Contribuabil implements Incasator{
+public class Contribuabil implements IContribuabil {
 
     private static int counter = 1;
 

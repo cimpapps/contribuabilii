@@ -1,12 +1,12 @@
 package com.thejavacademy.companie.view;
 
-import com.thejavacademy.companie.calculator.CalculatorTaxeEnum;
+import com.thejavacademy.companie.calculator.CalculatorTaxe;
 import com.thejavacademy.companie.contribuabili.Contribuabil;
 import com.thejavacademy.companie.contribuabili.RegistruContribuabili;
 
 import javax.swing.*;
 
-import static com.thejavacademy.companie.calculator.CalculatorTaxeEnum.*;
+import static com.thejavacademy.companie.calculator.CalculatorTaxe.*;
 
 public class PanouAdmin extends JPanel {
 
@@ -53,7 +53,7 @@ public class PanouAdmin extends JPanel {
         contentPane.add(ok);
         ok.addActionListener(e -> {
             Departament departament = (Departament) comboBox.getSelectedItem();
-            Contribuabil contribuabil = new Contribuabil(name.getText(), CalculatorTaxeEnum.getCalculator(departament));
+            Contribuabil contribuabil = new Contribuabil(name.getText(), CalculatorTaxe.getCalculator(departament));
             RegistruContribuabili.adaugaContribuabil(contribuabil);
             jDialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
             jDialog.dispose();

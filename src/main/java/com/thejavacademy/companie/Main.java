@@ -7,9 +7,9 @@ import com.thejavacademy.companie.contribuabili.RegistruContribuabili;
 import javax.swing.*;
 import java.util.Arrays;
 
-import static com.thejavacademy.companie.calculator.CalculatorTaxeEnum.*;
-import static com.thejavacademy.companie.calculator.CalculatorTaxeEnum.CALCULATOR_CONSTRUCTII;
-import static com.thejavacademy.companie.calculator.CalculatorTaxeEnum.CALCULATOR_IT;
+import static com.thejavacademy.companie.calculator.CalculatorTaxe.*;
+import static com.thejavacademy.companie.calculator.CalculatorTaxe.CALCULATOR_CONSTRUCTII;
+import static com.thejavacademy.companie.calculator.CalculatorTaxe.CALCULATOR_IT;
 
 /**
  * Se cere sa se dezvolte un program care sa tina evidenta veniturilor cetatenilor si a taxelor pe care le au de platit
@@ -23,8 +23,9 @@ import static com.thejavacademy.companie.calculator.CalculatorTaxeEnum.CALCULATO
  * Toti contribuabilii trebuie sa fie adaugati la un registru care expune urmatoarele functionalitati:
  *  - adauga un contribuabil nou
  *  - sterge un contribuabil
- *  - gaseste un contribuabil din toata lista de contribuabili
  *  - raporteaza evidenta tuturor contribuabililor
+ *
+ * Reigistru este unic pentru toti contribuabilii
  *
  * Solutia initiala nu va fi optima dar pe masura ce cursul va inainte elevii isi asuma responsabilitatea sa
  */
