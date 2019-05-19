@@ -1,16 +1,18 @@
 package com.thejavacademy.companie.contribuabili;
 
-public class RegistruContribuabili {
+public enum RegistruContribuabili {
 
-    private static int numarTotal = 0;
+    REGISTRU;
 
-    private static Contribuabil[] contribuabili = new Contribuabil[3];
+    private int numarTotal = 0;
 
-    public static Contribuabil[] getContribuabili() {
+    private Contribuabil[] contribuabili = new Contribuabil[3];
+
+    public Contribuabil[] getContribuabili() {
         return contribuabili;
     }
 
-    public static int getIndexContribuabilById(int id) {
+    public int getIndexContribuabilById(int id) {
         //fara binary search
         //apoi refactorizam cu binary search
         //apoi eficientizam facand in Anagajat un numarDeOrdine
@@ -23,7 +25,7 @@ public class RegistruContribuabili {
         return -1;
     }
 
-    public static void adaugaContribuabil(Contribuabil contribuabil) {
+    public void adaugaContribuabil(Contribuabil contribuabil) {
         numarTotal++;
         if (numarTotal > contribuabili.length) {
             maresteRegistru();
@@ -32,7 +34,7 @@ public class RegistruContribuabili {
         System.out.println("A fost adaugat contribuabilul " + contribuabil);
     }
 
-    public static void stergeContribuabil(Contribuabil contribuabil) {
+    public void stergeContribuabil(Contribuabil contribuabil) {
         //refactorizam sa stergem dintr-un singur pas dupa index
         int indexDeSters = getIndexContribuabilById(contribuabil.getId());
         if (indexDeSters < 0) {
@@ -47,7 +49,7 @@ public class RegistruContribuabili {
     }
 
 
-    private static void maresteRegistru() {
+    private void maresteRegistru() {
         Contribuabil[] nouaLista = new Contribuabil[contribuabili.length * 2];
 
         for (int i = 0; i < contribuabili.length; i++) {

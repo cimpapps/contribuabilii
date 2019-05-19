@@ -14,7 +14,7 @@ public class PanouAdmin extends JPanel {
     private JList list;
 
     public PanouAdmin() {
-        list = new JList(RegistruContribuabili.getContribuabili());
+        list = new JList(RegistruContribuabili.REGISTRU.getContribuabili());
         list.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
         list.setLayoutOrientation(JList.HORIZONTAL_WRAP);
         list.setVisibleRowCount(-1);
@@ -31,7 +31,7 @@ public class PanouAdmin extends JPanel {
     }
 
     private void repaintList() {
-        list.setListData(RegistruContribuabili.getContribuabili());
+        list.setListData(RegistruContribuabili.REGISTRU.getContribuabili());
         repaint();
     }
 
@@ -54,7 +54,7 @@ public class PanouAdmin extends JPanel {
         ok.addActionListener(e -> {
             Departament departament = (Departament) comboBox.getSelectedItem();
             Contribuabil contribuabil = new Contribuabil(name.getText(), CalculatorTaxe.getCalculator(departament));
-            RegistruContribuabili.adaugaContribuabil(contribuabil);
+            RegistruContribuabili.REGISTRU.adaugaContribuabil(contribuabil);
             jDialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
             jDialog.dispose();
             repaintList();
@@ -68,7 +68,7 @@ public class PanouAdmin extends JPanel {
         if (selectedValue == null) {
             return;
         }
-        RegistruContribuabili.stergeContribuabil(selectedValue);
+        RegistruContribuabili.REGISTRU.stergeContribuabil(selectedValue);
         repaintList();
 
     }

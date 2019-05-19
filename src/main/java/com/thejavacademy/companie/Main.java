@@ -38,10 +38,10 @@ public class Main {
         Contribuabil a2 = new Contribuabil("Orlando", CALCULATOR_IT);
         Contribuabil a3 = new Contribuabil("Alin", CALCULATOR_GENERAL);
         Contribuabil a4 = new Contribuabil("Catalin", CALCULATOR_GENERAL);
-        RegistruContribuabili.adaugaContribuabil(a1);
-        RegistruContribuabili.adaugaContribuabil(a2);
-        RegistruContribuabili.adaugaContribuabil(a3);
-        RegistruContribuabili.adaugaContribuabil(a4);
+        RegistruContribuabili.REGISTRU.adaugaContribuabil(a1);
+        RegistruContribuabili.REGISTRU.adaugaContribuabil(a2);
+        RegistruContribuabili.REGISTRU.adaugaContribuabil(a3);
+        RegistruContribuabili.REGISTRU.adaugaContribuabil(a4);
 
         a1.declaraVenituri(32432.3);
         a1.platesteTaxa(999);
@@ -53,9 +53,9 @@ public class Main {
 
         Contribuabil a5 = new Contribuabil("John Doe", CALCULATOR_CONSTRUCTII);
 
-        RegistruContribuabili.stergeContribuabil(a5);
-        System.out.println(Arrays.toString(RegistruContribuabili.getContribuabili()));
-        System.out.println(Arrays.toString(RegistruContribuabili.getContribuabili()));
+        RegistruContribuabili.REGISTRU.stergeContribuabil(a5);
+        System.out.println(Arrays.toString(RegistruContribuabili.REGISTRU.getContribuabili()));
+        System.out.println(Arrays.toString(RegistruContribuabili.REGISTRU.getContribuabili()));
 
 
         JFrame fereastra = new JFrame();
