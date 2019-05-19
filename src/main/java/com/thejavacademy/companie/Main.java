@@ -26,11 +26,12 @@ import static com.thejavacademy.companie.calculator.CalculatorTaxe.CALCULATOR_IT
  * Toti contribuabilii trebuie sa fie adaugati la un registru care expune urmatoarele functionalitati:
  *  - adauga un contribuabil nou
  *  - sterge un contribuabil
- *  - raporteaza evidenta tuturor contribuabililor ( ce venituri are, ce taxe a platit, ce taxe mai are de platit)
+ *  - raporteaza evidenta tuturor contribuabililor (ce venituri au, ce taxe au platit, ce taxe mai au de platit)
  *
  * Reigistrul este unic pentru toti contribuabilii
  *
- * Solutia initiala nu va fi optima dar pe masura ce cursul va inainte elevii isi asuma responsabilitatea sa
+ * *** Solutia initiala nu va fi optima, dar pe masura ce cursul va inainte elevii isi asuma responsabilitatea sa
+ * *** Se va folosi doar ce am invatat pana acum
  */
 
 public class Main {
