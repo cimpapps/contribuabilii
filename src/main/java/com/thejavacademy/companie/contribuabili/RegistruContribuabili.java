@@ -6,9 +6,9 @@ public enum RegistruContribuabili {
 
     private int numarTotal = 0;
 
-    private Contribuabil[] contribuabili = new Contribuabil[3];
+    private IContribuabil[] contribuabili = new Contribuabil[3];
 
-    public Contribuabil[] getContribuabili() {
+    public IContribuabil[] getContribuabili() {
         return contribuabili;
     }
 
@@ -50,7 +50,7 @@ public enum RegistruContribuabili {
 
 
     private void maresteRegistru() {
-        Contribuabil[] nouaLista = new Contribuabil[contribuabili.length * 2];
+        IContribuabil[] nouaLista = new IContribuabil[contribuabili.length * 2];
 
         for (int i = 0; i < contribuabili.length; i++) {
             nouaLista[i] = contribuabili[i];
