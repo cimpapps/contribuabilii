@@ -14,13 +14,14 @@ import static com.thejavacademy.companie.calculator.CalculatorTaxe.CALCULATOR_IT
 /**
  * Se cere sa se dezvolte un program care sa tina evidenta veniturilor cetatenilor si a taxelor pe care le au de platit
  * Orice cetatean care plateste taxe(contribuabil) trebuie sa fie aibe urmatorul comportament:
- *  - isi declare veniturile noi
- *  - isi plateasca taxele
+ *  - isi declare veniturile noi (se adauga la veniturile totale)
+ *  - isi plateasca taxele (se scade din taxele totale pe care le are de platit)
+ *              *** nu are voie sa plateasca mai mult decat taxele datorate
  *  - sa raspunda la intrebarea ce venituri a avut pana in prezent(suma a tot ce a declarat pana in prezent)
- *  - sa raspunda la intrebarea ce taxe are de platit
+ *  - sa raspunda la intrebarea ce taxe are de platit (double suma taxelor)
  *  - sa raspunda la intrbarea ce taxe a platit pana acum
  *  - sa raspunda la intrebarea ce id are - stim ca idul se vrea sa fie unic si sa fie in ordineea creeari lor.
- *          De asemenea idul nu va putea fi schimbat dupa ce a fost asignat unui contribuabil
+ *              *** De asemenea idul nu va putea fi schimbat dupa ce a fost asignat unui contribuabil
  *
  * Toti contribuabilii trebuie sa fie adaugati la un registru care expune urmatoarele functionalitati:
  *  - adauga un contribuabil nou
