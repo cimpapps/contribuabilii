@@ -17,13 +17,15 @@ import static com.thejavacademy.companie.calculator.CalculatorTaxe.CALCULATOR_IT
  *  - isi declare veniturile noi
  *  - isi plateasca taxele
  *  - sa raspunda la intrebarea ce venituri a avut pana in prezent(suma a tot ce a declarat pana in prezent)
- *  - sa raspunda la intrebarea ce taxe are de platit si ce taxe a platit pana acum
- *  - sa raspunda la intrebarea ce id are
+ *  - sa raspunda la intrebarea ce taxe are de platit
+ *  - sa raspunda la intrbarea ce taxe a platit pana acum
+ *  - sa raspunda la intrebarea ce id are - stim ca idul se vrea sa fie unic si sa fie in ordineea creeari lor.
+ *          De asemenea idul nu va putea fi schimbat dupa ce a fost asignat unui contribuabil
  *
  * Toti contribuabilii trebuie sa fie adaugati la un registru care expune urmatoarele functionalitati:
  *  - adauga un contribuabil nou
  *  - sterge un contribuabil
- *  - raporteaza evidenta tuturor contribuabililor
+ *  - raporteaza evidenta tuturor contribuabililor ( ce venituri are, ce taxe a platit, ce taxe mai are de platit)
  *
  * Reigistrul este unic pentru toti contribuabilii
  *
