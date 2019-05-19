@@ -34,10 +34,10 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Contribuabil a1 = new Contribuabil("Dan",CALCULATOR_CONSTRUCTII);
-        Contribuabil a2 = new Contribuabil("Orlando", CALCULATOR_IT);
-        Contribuabil a3 = new Contribuabil("Alin", CALCULATOR_GENERAL);
-        Contribuabil a4 = new Contribuabil("Catalin", CALCULATOR_GENERAL);
+        Contribuabil a1 = new Contribuabil("Dan Homosexualul",CALCULATOR_CONSTRUCTII);
+        Contribuabil a2 = new Contribuabil("Orlando aka Troaca", CALCULATOR_IT);
+        Contribuabil a3 = new Contribuabil("Alin Bulenciaga", CALCULATOR_GENERAL);
+        Contribuabil a4 = new Contribuabil("Catalin Grasu", CALCULATOR_GENERAL);
         RegistruContribuabili.REGISTRU.adaugaContribuabil(a1);
         RegistruContribuabili.REGISTRU.adaugaContribuabil(a2);
         RegistruContribuabili.REGISTRU.adaugaContribuabil(a3);

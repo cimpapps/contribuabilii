@@ -26,11 +26,11 @@ public enum RegistruContribuabili {
     }
 
     public void adaugaContribuabil(Contribuabil contribuabil) {
-        numarTotal++;
-        if (numarTotal > contribuabili.length) {
+        if (numarTotal + 1 > contribuabili.length) {
             maresteRegistru();
         }
-        contribuabili[numarTotal - 1] = contribuabil;
+        contribuabili[numarTotal] = contribuabil;
+        numarTotal++;
         System.out.println("A fost adaugat contribuabilul " + contribuabil);
     }
 
